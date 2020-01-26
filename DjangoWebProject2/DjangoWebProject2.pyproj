@@ -46,6 +46,7 @@
   <ItemGroup>
     <Folder Include="app\" />
     <Folder Include="app\migrations\" />
+    <Folder Include="app\pictures\" />
     <Folder Include="app\static\" />
     <Folder Include="app\static\app\" />
     <Folder Include="app\static\app\content\" />
@@ -56,6 +57,10 @@
     <Folder Include="DjangoWebProject2\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\pictures\ml8xb8f2z.jpg" />
+    <Content Include="app\static\app\content\fon.jpg" />
+    <Content Include="app\static\app\content\ml8xb8f2z.jpg" />
+    <Content Include="app\templates\app\Registration.html" />
     <Content Include="requirements.txt" />
     <Content Include="db.sqlite3" />
     <Content Include="app\static\app\content\bootstrap.css" />

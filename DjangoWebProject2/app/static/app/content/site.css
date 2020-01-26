@@ -1,6 +1,8 @@
 body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-image:url(fon.jpg);
+    background-size: cover;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -39,4 +41,11 @@ input[type="checkbox"].input-validation-error {
 
 .validation-summary-valid {
     display: none;
+}
+.jumbotron {
+    background-image: url(ml8xb8f2z.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    height: 600px;
+    width: auto;
 }

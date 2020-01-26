@@ -1,0 +1,20 @@
+﻿<!--♕-->
+{% extends "app/layout.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+ <h2>Регистрация пользователя</h2>
+
+ <form method="POST" > {% csrf_token %}
+
+ <div>
+
+    {{regform|crispy}}
+
+ <button type="submit" class="save btn btn-default" > Зарегистрировать</button>
+
+ </div>
+
+ </form>
+
+{% endblock %}

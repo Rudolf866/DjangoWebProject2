@@ -1,16 +1,20 @@
+﻿<!--♕-->
 {% if user.is_authenticated %}
-<form id="logoutForm" action="/logout" method="post" class="navbar-right">
+<form id="logoutForm" action="/logout" method="post" class="navbar-nav mr-auto">
     {% csrf_token %}
-    <ul class="nav navbar-nav navbar-right">
-        <li><span class="navbar-brand">Hello {{ user.username }}!</span></li>
-        <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
+  <ul class="navbar-nav mr-auto">
+        <li><span class="navbar-nav mr-auto">Hello {{ user.username }}!</span></li>
+        <li><a href="javascript:document.getElementById('logoutForm').submit()">Выход</a></li>
     </ul>
 </form>
 
 {% else %}
-
-<ul class="nav navbar-nav navbar-right">
-    <li><a href="{% url 'login' %}">Log in</a></li>
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+<ul class="navbar-nav mr-auto">
+    <li class="nav-item active" ><a class="nav-link"   href="{% url 'login' %}">Вход</a></li>
 </ul>
-
+    <ul class="navbar-nav mr-auto">
+    <li class="nav-item active"><a class="nav-link" href="{% url 'registration' %}">Регистрация</a></li>
+</ul>
+  </div>
 {% endif %}

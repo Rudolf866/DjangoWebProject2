@@ -40,6 +40,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'crispy_forms',#Пакет django-cripsy-forms для стилизации форм.( https://sharelink.ru/blog/ustanovka-nastrojka-i-primenenie-django-cripsy-forms/)
+    #'bootstrapform',#Пакет django-bootstrap-form( https://github.com/tzangms/django-bootstrap-form)
+
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -66,6 +69,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media',#Если включить этот процессор, в RequestContext будет добавлена переменная MEDIA_URL, которая содержит значение MEDIA_URL.
             ],
         },
     },
@@ -109,7 +113,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Moscow'
 
 USE_I18N = True
 
@@ -124,3 +128,14 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATIC_ROOT = posixpath.join(*(BASE_DIR.split(os.path.sep) + ['static']))
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+MEDIA_URL = '/media/'
+#Pillow, форк от PIL (Python Imaging Library) - библиотека для манипуляций с картинками для python.
+#pip install Pillow
+# Pillow(https://pythonru.com/biblioteki/osnovnye-vozmozhnosti-biblioteki-python-imaging-library-pillow-pil)
+
+CRISPY_TAMPLATE_PACK='bootstrap3'
+
+
